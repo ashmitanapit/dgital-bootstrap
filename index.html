@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Digital bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+
+  .container{
+    margin: 0 100px;
+  
+ 
+}
+
+
+
+
+.CSSgal {
+    position: relative;
+    overflow: hidden;
+    height: 300px; 
+
+}
+
+/* SLIDER */
+
+.CSSgal .slider {
+    height: 100%;
+    white-space: nowrap;
+    font-size: 0;
+    transition: 0.8s;
+}
+/*.slider img{
+    height:500%;
+    width: 100%;
+}
+*/
+/* SLIDES */
+
+.CSSgal .slider > * {
+    font-size: 1rem;
+    display: inline-block;
+    white-space: normal;
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    background: none 50% no-repeat;
+    background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+
+.CSSgal .prevNext {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 100%;
+    height: 0;
+}
+
+.CSSgal .prevNext > div+div {
+    visibility: hidden; /* Hide all but first P/N container */
+}
+
+.CSSgal .prevNext a {
+    background: #fff;
+    position: absolute;
+    width:       60px;
+    height:      60px;
+    line-height: 60px; /* If you want to place numbers */
+    text-align: center;
+    opacity: 0.7;
+    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+    left: 0;
+}
+.CSSgal .prevNext a:hover {
+    opacity: 1;
+}
+.CSSgal .prevNext a+a {
+    left: auto;
+    right: 0;
+}
+
+/* NAVIGATION */
+
+.CSSgal .bullets {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    padding: 10px 0;
+   
+    width:100%;
+    text-align: center;
+}
+.CSSgal .bullets > a {
+    display: inline-block;
+    width:       20px;
+    height:      20px;
+    line-height: 20px;
+    text-decoration: none;
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    -webkit-transition: 0.3s;
+                    transition: 0.3s;
+}
+.CSSgal .bullets > a+a {
+    background: rgba(255, 255, 255, 0.5); /* Dim all but first */
+}
+.CSSgal .bullets > a:hover {
+    background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* NAVIGATION BUTTONS */
+/* ALL: */
+.CSSgal >s:target ~ .bullets >* {      background: rgba(255, 255, 255, 0.5);}
+/* ACTIVE */
+#s1:target ~ .bullets >*:nth-child(1) {background: rgba(255, 255, 255,   1);}
+#s2:target ~ .bullets >*:nth-child(2) {background: rgba(255, 255, 255,   1);}
+#s3:target ~ .bullets >*:nth-child(3) {background: rgba(255, 255, 255,   1);}
+#s4:target ~ .bullets >*:nth-child(4) {background: rgba(255, 255, 255,   1);}
+/* More slides? Add here more rules */
+
+/* PREV/NEXT CONTAINERS VISIBILITY */
+/* ALL: */
+.CSSgal >s:target ~ .prevNext >* {      visibility: hidden;}
+/* ACTIVE: */
+#s1:target ~ .prevNext >*:nth-child(1) {visibility: visible;}
+#s2:target ~ .prevNext >*:nth-child(2) {visibility: visible;}
+#s3:target ~ .prevNext >*:nth-child(3) {visibility: visible;}
+#s4:target ~ .prevNext >*:nth-child(4) {visibility: visible;}
+/* More slides? Add here more rules */
+
+/* SLIDER ANIMATION POSITIONS */
+
+#s1:target ~ .slider {transform: translateX(   0%); -webkit-transform: translateX(   0%);}
+#s2:target ~ .slider {transform: translateX(-100%); -webkit-transform: translateX(-100%);}
+#s3:target ~ .slider {transform: translateX(-200%); -webkit-transform: translateX(-200%);}
+#s4:target ~ .slider {transform: translateX(-300%); -webkit-transform: translateX(-300%);}
+/* More slides? Add here more rules */
+
+
+/* YOU'RE THE DESIGNER! 
+   ____________________
+   All above was mainly to get it working :)
+   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
+
+.CSSgal{
+    color: #fff;    
+    text-align: center;
+}
+.CSSgal .slider h2 {
+    margin-top: 40vh;
+    font-weight: 200;
+    letter-spacing: -0.06em;
+    word-spacing: 0.2em;
+    font-size: 3em;
+}
+.CSSgal a {
+    border-radius: 50%;
+    margin: 0 3px;
+    color: rgba(0,0,0,0.8);
+    text-decoration: none;
+}
+.text{
+    font-size: 20px;
+}
+.about_us{
+  float: right;
+
+}
+
+hr{
+  height: 2px;
+  background-color:  #0F5205;
+
+}
+/*.thumbnail img{
+    height: 100px;
+    
+}*/
+      
+  </style>
+</head>
+<body>
+  
+
+ <div class="topnav">
+    <div class="container">
+    <div class="row">
+      <div class="col-sm">
+      <img src="images/logo.jpg" class="img-thumbnail" width="200" height="220"> 
+    </div>
+    <div class="col-sm">
+      <p>A PLACE FOR YOUR CUSTOMIZED PRINTING AND POST PRINTING JOBS</p>
+    </div>
+    <div class="col-sm">
+      <p>977-1-5104396<br>9851154029</p>
+    </div>
+        <div class="col-sm">
+      <p>info@xeroxdgtlpress.com<BR>xeroxdigitalpress@gmail.com</p>
+    </div>
+    </div>
+ </div>
+</div>
+<div class="navbar navbar-dark bg-success">
+
+    <div class="container">
+        <a style="color: white"class="active" href="#">HOME</a>
+        <a style="color: white" href="#">ABOUT US</a>
+        <a style="color: white" href="#">PHILOSOPHY</a>
+        <a style="color: white" href="#">SERVICES</a>
+        <a style="color: white" href="#">GALLERY</a>
+        <a style="color: white" href="#">WHAT WE HAVE</a>
+        <a style="color: white" href="#">EXTENDED SERVICES</a>
+        <a style="color: white" href="#">BLOG</a>
+        <a style="color: white" href="#">CONTACT US</a>
+
+    </div>
+</div>
+  <div class="container">
+    <div class="CSSgal">
+
+  <!-- Don't wrap targets in parent -->
+  <s id="s1"></s> 
+  <s id="s2"></s>
+  <s id="s3"></s>
+  <s id="s4"></s>
+
+  <div class="slider">
+    
+    
+    <div class="img">
+            <img src="images/print1.jpg">
+            <p>Latest Digital press machine in nepal</p>
+        </div>
+    <div class="img">
+            <img src="images/1.jpg">
+    <p>our printing products</p>
+        </div>
+    <div class="img">
+            <img src="images/card.jpg">
+    <p>our printing products</p>
+        </div>
+    <div class="img">
+            <img src="images/img2.jpg">
+    <p>our printing products</p>
+        </div>
+  </div>
+  
+  <div class="prevNext">
+    <div><a href="#s4"></a><a href="#s2"></a></div>
+    <div><a href="#s1"></a><a href="#s3"></a></div>
+    <div><a href="#s2"></a><a href="#s4"></a></div>
+    <div><a href="#s3"></a><a href="#s1"></a></div>
+  </div>
+
+  <div class="bullets">
+    <a href="#s1">1</a>
+    <a href="#s2">2</a>
+    <a href="#s3">3</a>
+    <a href="#s4">4</a>
+  </div>
+</div>
+
+</div>
+<div class="container">
+    <h3>Welcome to Xerox Digital Press, <span class="text">Leading Digital Press in Kathmandu, Nepal</span></h3> 
+
+        <p>Xerox Digital Colour Press is well known and established Digital Colour Press in Kathmandu with wide varities paper printing formats. In present world, mostly two most common commercial printing technologies are in use. The traditional “Offset Printing” and the latest “Digital Printing” technologies. And here we have tried to introduce the Digital printing for your convenience. Digital printing technology is getting easier on these days as it reduces the many efforts taking steps required in the offset printing process, such as developing films and plates for ink rollers and transfer them in paper sizes. Digital printing is easier and faster while performing printing task. It reduces many other activities like arranging color combinations, setting plates and so on. This is why digital printing would be faster and more accurate. The colour would be shining and more durable. There is no risk of color spreading as it uses the toner dust/powder.</p>
+
+        <p>We are stepping forward to introduce the latest technologies in printing colourful creations of yours within shorter turnaround. Sometimes delayed in printing your documents and worksheets could be the hurdles for your organization. We are here to assist you to handle your works. We would further shine your designs with lamination and binding too.</p>
+
+        <p>This is age of technology. The manual works of people are rapidly replaced by the technologies. People seek to work without spending much time. Sometimes important documents, proposals, booklets, mannuals, leaflets, pumplets, envelopes, invitation cards, visiting cards, business cards, coupons, tickets, bils, tags, banners, letterhead, magazines, menus, work schedules, calanders, photocopies, colour copies and so on, at that time digital printing press could be your best choice. We work with your designs or we can give our designs to meet your concept in a very reasonable price.</p>
+
+        <p>We passed many years in this printing sector. Our clients are more frequent. We assure quality and fast service. Not only digital printing we provide offset printing services too for more quantity jobs. Distant Clients can send the designs of their choice through mail and could collect them through the courier services.</p>
+
+        <div class="about_us">
+            <button type="button" class="btn btn-success">Success</button>
+        </div>
+    <br>
+        <div class="panal_box">
+            <div class="box_header">
+              <h2 class="header_text">Some of Our Printing Categories:</h2>
+                
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <div class="thumbnail">
+                            <img src="images/img11.jpg" style="width:100%">
+                                <div class="caption">
+                                    <p>Digital printing machines.</p>
+                                </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumbnail">
+                            <img src="images/img11.jpg" style="width:100%">
+                                <div class="caption">
+                                    <p>Digital printing machines.</p>
+                                </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumbnail">
+                            <img src="images/img11.jpg" style="width:100%">
+                                <div class="caption">
+                                    <p>Digital printing machines.</p>
+                                </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumbnail">
+                            <img src="images/img11.jpg" style="width:100%">
+                                <div class="caption">
+                                    <p>Digital printing machines.</p>
+                                </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="thumbnail">
+                            <img src="images/img11.jpg" style="width:100%">
+                                <div class="caption">
+                                    <p>Digital printing machines.</p>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<hr>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>Xerox Digital Colour Press,</h3>
+            <p>Subidhanagar, Tinkune, Kathmandu <br> 977-1-5104396,: 977-9851154029 <br> info@xeroxdgtlpress.com, xeroxdigitalpress@gmail.com<br> https://www.facebook.com/xeroxdigitalpress</p>
+            </div>
+            <div col-sm-6>
+                <h5>Designed & Developed By: Broadway Infosys Nepal</h5>
+                <br>
+                <br>
+                <h5>© 2014, Xerox Digital Press Pvt. Ltd. All Right Reserved.</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
